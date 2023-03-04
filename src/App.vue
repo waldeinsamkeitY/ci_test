@@ -1,5 +1,12 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
+import {ref,onMounted} from 'vue'
+const li =Array.from({length: 5}, (v, i) => i)
+const item = ref(null)
+console.log('item2', item.value)
+onMounted(()=>{
+  console.log('item ', item.value)
+})
 </script>
 
 <template>
@@ -9,9 +16,10 @@ import HelloWorld from './components/HelloWorld.vue'
     </a>
     <a href="https://vuejs.org/" target="_blank">
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
+      <div v-for="(v,i) in li" :key="i" ref="item">{{v}}</div>
     </a>
   </div>
-  <HelloWorld msg="Vite + Vue" />
+  <HelloWorld msg="Vite + Vue + github + build" />
 </template>
 
 <style scoped>
