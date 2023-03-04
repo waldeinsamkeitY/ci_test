@@ -19,7 +19,7 @@ onMounted(()=>{
       <div v-for="(v,i) in li" :key="i" ref="item">{{v}}</div>
     </a>
   </div>
-  <HelloWorld msg="Vite + Vue + github + build" />
+  <HelloWorld msg="Vite + Vue + github + build + 1" />
 </template>
 
 <style scoped>
